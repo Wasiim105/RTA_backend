@@ -43,8 +43,8 @@ app.use("/api/inspectionDetails", inspectionDetailsRoute);
 // Start server after DB connection
 const startServer = async () => {
   try {
-    //await connectToDatabase();
-    const PORT = process.env.PORT || 4500;
+    await connectToDatabase();
+    const PORT = process.env.PORT || 1433;
     app.listen(PORT, () => {
       console.log(`✅ Server is running on port ${PORT}`);
     });
