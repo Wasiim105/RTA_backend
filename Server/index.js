@@ -20,7 +20,7 @@ const app = express();
 // Middleware to parse JSON bodies
 app.use(express.json());
 
-app.use(cors());
+app.use(cors({ origin: "*" }));
 
 // Use Helmet middleware for basic security headers
 app.use(helmet());
